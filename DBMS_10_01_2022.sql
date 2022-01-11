@@ -35,5 +35,13 @@ Select Age,COUNT(*) from Student GROUP BY Age
 Alter Table Student 
 Add MobileNo varchar(10)
 
+update Student
+SET MobileNo = '7635345267'
+Where StudentName = 'Pranjal'
+
+Delete from Student
+Where StudentName = 'Rushi'
+
+
 
 
