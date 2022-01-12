@@ -64,7 +64,7 @@ VALUES
 (7,'Ashutosh Gohel','8131931813', NULL, NULL),
 (8,'Mahek Raj','9232387729', NULL, 2),
 (9,'Bansi Hirapara','6301281831', 5, 4)
-(10,’Raj Radadiya’,’7361768181’,4,NULL),
+(10,â€™Raj Radadiyaâ€™,â€™7361768181â€™,4,NULL),
 (11,'Viral shah','7463364892',3,2),
 (12,'Nirali Savaliya','7462362892',NULL,1),
 (13,'Rajvi sonani','7326764892',4,2)
@@ -142,7 +142,7 @@ End
 -- procedure to get the numbers of employees having no clients (Output Parameters)
 
 Create procedure sp_getEmployeeWithNoClient
-	@Count int
+	@Count int OUTPUT
 AS
 BEGIN
 Select @Count = Count(EmployeeID) from Employee
@@ -151,7 +151,7 @@ END
 
 Declare @Count_new INT
 EXEC sp_getEmployeeWithNoClient @Count = @Count_new OUTPUT
-Select @Count_new as ‘Total_Employee_With_No_Client’
+Select @Count_new as â€˜Total_Employee_With_No_Clientâ€™
 
 
 
