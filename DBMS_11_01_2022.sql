@@ -63,8 +63,8 @@ VALUES
 (6,'Mohan Malaviya','9173179131', 10,5),
 (7,'Ashutosh Gohel','8131931813', NULL, NULL),
 (8,'Mahek Raj','9232387729', NULL, 2),
-(9,'Bansi Hirapara','6301281831', 5, 4)
-(10,’Raj Radadiya’,’7361768181’,4,NULL),
+(9,'Bansi Hirapara','6301281831', 5, 4),
+(10,'Raj Radadiya','7361768181',4,NULL),
 (11,'Viral shah','7463364892',3,2),
 (12,'Nirali Savaliya','7462362892',NULL,1),
 (13,'Rajvi sonani','7326764892',4,2)
