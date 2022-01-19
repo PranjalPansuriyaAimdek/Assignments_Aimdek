@@ -1,0 +1,53 @@
+show dbs
+
+use School
+
+db.createCollection('Teacher')
+
+show collections
+
+db.Teacher.insert(
+    {
+        Name: 'Dipen joshi',
+        gender : 'Male',
+    }
+)
+
+db.Teacher.insertMany(
+    [
+        {
+            Name : 'Malay Roy',
+            gender : 'Male',
+            Subject: 'Account'
+        },
+        {
+            Name : 'Mansi Roy',
+            gender : 'Female',
+            Subject: 'Chemistry'
+        },
+        {
+            Name : 'Nandini Bhatasana',
+            gender : 'Female',
+            Subject: 'Data Structure',
+            MObileNo : '6746647735'
+        }
+
+    ]
+)
+
+db.Teacher.find()
+
+db.Teacher.find().pretty()
+
+db.Teacher.find({gender : 'Female'}).pretty()
+
+db.Teacher.update({Name : 'Malay Roy'},
+{
+    $set : {
+        Name : 'Malaika Roy',
+        gender : 'Female'
+    }
+} 
+)
+
+db.Teacher.remove('Name' : 'Mansi Roy')
