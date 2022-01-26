@@ -1,0 +1,17 @@
+*{
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+.cardAddProduct {
+    background-color: rgb(185, 204, 199) !important;
+}
+
+.btnAdd{
+    background-color: teal !important;
+    color: white;
+}
+
+.imgInventory{ 
+    width: 150px;
+}
