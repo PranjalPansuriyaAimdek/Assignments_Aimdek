@@ -8,8 +8,11 @@
     </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -18,59 +21,155 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="card m-2 cardAddProduct">
                     <div class="card-body">
                         <div class="card-title text-center titleAddProduct">
-                            <h3>Add Products</h3>
+
+                            <h3>Add Products<i class="fas fa-plus-circle pl-3"></i></h3>
                         </div>
                         <hr>
                         <div class="inputContainer form-group">
-                            <input type="text" class="form-control form-control-sm" placeholder="Enter Product Name">
+                            <input type="text" class="form-control form-control-sm " placeholder="Enter Product Name"
+                                id='valProductNameAdd'>
                             <br>
 
 
                             <label class="text-muted h6">Choose image of product</label>
-                            <input type="file" class="form-control-file form-control-sm">
+                            <input type="file" class="form-control-file form-control-sm" id="valProductImageAdd"
+                                onchange="loadImage(event)">
 
                             <br>
-                            <textarea class="form-control form-control-sm"
-                                placeholder="Enter Product Description"></textarea>
+                            <textarea class="form-control form-control-sm" placeholder="Enter Product Description"
+                                id="valProductDescriptionAdd"></textarea>
 
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="number" class="form-control form-control-sm" placeholder="Quantity">
+                                    <input type="number" class="form-control form-control-sm" id="valProductQuantityAdd"
+                                        placeholder="Quantity">
                                 </div>
                                 <div class="col">
-                                    <input type="number" class="form-control form-control-sm" placeholder="Price">
+                                    <input type="number" class="form-control form-control-sm" id="valProductPriceAdd"
+                                        placeholder="Price">
                                 </div>
                             </div>
 
                             <br>
-                            <button class="btnAdd btn btn-submit btn-block btn-sm">Add to Inventory</button>
+                            <button class=" btn btn-submit btn-block btn-sm" id="btnAddToInventory">Add to
+                                Inventory</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="card m-2 cardCart">
+                    <div class="card-body">
+                        <div class="card-title text-center titleCart">
+                            <h3>Cart<i class="fa fa-shopping-cart ml-3"></i></h3>
+                        </div>
+                        <hr>
+                        <ul class="list-group" id="ulCart">
+                            <!-- <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img class="imgCart rounded float-left" src="photos/whiteShirt.jpg">
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="font-weight-bold" id="lblProductNameCart">
+                                                Product :
+                                            </div>
+                                            <div class="col" id="valProductNameCart">
+                                                White shirts with tie
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="font-weight-bold" id="lblProductPriceCart">
+                                                Price :
+                                            </div>
+                                            <div class="col" id="valProductPriceCart">
+                                                2000
+                                            </div>
+
+                                            <div class="font-weight-bold" id="lblProductQuantityCart">
+                                                Quantity :
+                                            </div>
+                                            <div class="col" id="valProductQuantityCart">
+                                                29
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="font-weight-bold" id="lblProductTotalCart">
+                                                Total :
+                                            </div>
+                                            <div class="col" id="valProductTotalCart">
+                                                2000
+                                            </div>
+                                            <div cass="col">
+                                                <button class=" btn btn-danger btn-sm mr-5"
+                                                    id="btnRemoveFromCart">Remove<i
+                                                        class="fas fa-trash ml-2"></i></button>
+                                            </div>
+
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </li> -->
+
+
+                        </ul>
+                        <div class="card" id="cardGrandTotal">
+                            <div class="card-body">
+                                <div class="container">
+                                    <div class="row justify-content-center h5">
+                                        <div class=" font-weight-bold" id="lblGrandTotal">
+                                            Grand Total :
+                                        </div>
+                                        <div class="ml-2 font-weight-bold" id="valGrandTotal">
+                                        </div>
+                                    </div>
+                                    <div class="btn btn-block " id="btnPlaceOrder" onclick="btnPlaceOrderClicked()">
+                                        Place Order
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="col-md-8">
+
+            <div class="col-md-7">
                 <div class="card cardInventory m-2">
                     <div class="card-body">
                         <div class="card-title text-center titleInventory">
-                            <h3>Inventory</h3>
+                            <h3>Inventory<i class="fa fa-boxes ml-3"></i></h3>
                         </div>
-                        <ul class="list-group">
-                            
+                        <hr>
+                        <ul class="list-group" id="ulInventory">
                             <li class="list-group-item">
-                                <img src="photos/whiteShirt.jpg" class="rounded float-left" alt="shirt" style=" width: 150px;">
-                                aassecxd</li>
+
+                            </li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
+
+
         </div>
 
 
@@ -89,11 +188,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
     <!-- programming logic -->
-    <script>
-
-    </script>
+    <script src="index.js"></script>
     <!-- programming logic -->
 </body>
 

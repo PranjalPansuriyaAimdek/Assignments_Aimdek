@@ -1,17 +1,42 @@
 *{
     
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cardAddProduct {
     background-color: rgb(185, 204, 199) !important;
 }
 
-.btnAdd{
+.cardCart {
+    background-color: rgb(199, 183, 182) !important;
+}
+
+.cardInventory{
+    background-color: rgb(185, 204, 199) !important;
+}
+#btnAddToInventory {
     background-color: teal !important;
     color: white;
 }
 
+#btnAddToCart{
+    background-color: teal !important;
+    color: white;
+}
+
+#btnPlaceOrder{
+    background-color: teal !important;
+    color: white;
+}
 .imgInventory{ 
-    width: 150px;
+    width: 120px;
+    height: 100px;
+}
+.imgCart{ 
+    width: 80px;
+    height: 75px;
+}
+
+hr{
+    background-color: rgb(202, 199, 199);
 }
