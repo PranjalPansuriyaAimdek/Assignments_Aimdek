@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "mukesh",
+        "password": "muk123",
+        "gender": "male",
+        "birthdate": "02/04/2001",
+        "age": 21,
+        "country": "india",
+        "phone": "+912738273222"
+    },
+    {
+        "id": 2,
+        "name": "nutan",
+        "password": "nm1282",
+        "gender": "male",
+        "birthdate": "12/10/1991",
+        "age": 31,
+        "country": "Australia",
+        "phone": "+912738274552"
+    },
+    {
+        "id": 3,
+        "name": "maulik",
+        "passowrd": "mau121",
+        "gender": "male",
+        "birthdate": "12/2/2001",
+        "age": 21,
+        "country": "india",
+        "phone": "+917449030299"
+    }
+]
