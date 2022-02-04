@@ -1,0 +1,57 @@
+[
+    {
+        "id": 0,
+        "Question": "Surat is situated at which river?",
+        "options" : [
+            "Ganga",
+            "Sabarmati",
+            "Narmada",
+            "Tapi"
+        ],
+        "answer": "Tapi"
+    },
+    {
+        "id": 1,
+        "Question": "Which is a famous bengali sweet?",
+        "options": [
+            "gulabjamun",
+            "Rasgulla",
+            "Jalebi",
+            "Petha"
+        ],
+        "answer" : "Rasgulla"
+    },
+    {
+        "id": 2,
+        "Question": "Rudramahalay is situated at which city?",
+        "options" : [
+            "Siddhpur",
+            "Surat",
+            "Bharuch",
+            "Jamnagar"
+        ],
+        "answer": "Siddhpur"
+    },
+    {
+        "id": 3,
+        "Question": "Bitcoin is created by which technology?",
+        "options" : [
+            "Augmented Reality",
+            "IOT",
+            "BlockChain",
+            "AI"
+        ],
+        "answer": "BlockChain"
+    },
+    {
+        "id": 4,
+        "Question": "Who is the famous bollywood singer among these?",
+        "options" : [
+            "Siddharth Shukla",
+            "Arijit Singh",
+            "Shruti Hassan",
+            "Salman Khan"
+        ],
+        "answer": "Arijit Singh"
+    }
+]
