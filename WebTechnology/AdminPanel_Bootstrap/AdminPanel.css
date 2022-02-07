@@ -1,0 +1,12 @@
+.sidebar{
+    display:flex;
+    box-sizing: content-box;
+    background-color:rgb(203, 214, 203);
+}
+.nav-item{
+    padding: 5px;
+}
+
+.brand{
+    font-weight: 300;
+}

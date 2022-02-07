@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box ;
+    font-family: 'Roboto', sans-serif;
+}
+/*sidebar css start */
+.sidebar{
+    
+    margin: 10px;
+    position: fixed;
+    width: 20vw;
+    height: 100vh;
+    padding: 10px;
+    background-color:lightgray;
+    
+    border-radius: 10px;
+}
+.sidebar .brand-name{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+}
+.sidebar li{
+    display: flex;
+    align-items: center;
+    padding: 15px 60px;
+    font-size: 17px;
+    color:gray;
+    
+}
+
+.sidebar li:hover{
+    background-color: white;
+    color: black;
+    
+}
+.sidebar a:link{
+    text-decoration: none;
+    color: black;
+}
+#sidebar-list{
+    margin-top: 30px;
+}
+
+/*sidebar css end*/
+
+
+/* container css start */
+.container{
+    position:absolute;
+    right: 0px;
+    width: 80vw;
+    height: 100vh;
+
+}
+/* container css end */
+
+/* navbar css start */
+.navbar ul {
+    list-style-type: none;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.navbar li {
+    float: left;
+  }
+  
+ .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ .navbar li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+ .navbar .active {
+    background-color: #7aa069;
+  }
+  /* navbar css end */
+
+  /* cards css start */
+ .card1{
+     margin: 20px;
+     background-color:rgb(114, 163, 165);
+     border-radius: 10px;
+     width:fit-content;
+     color:rgb(40, 43, 44);
+ }
+
+ .card2{
+    margin: 20px;
+    background-color:rgb(165, 145, 114);
+    border-radius: 10px;
+    width:fit-content;
+    color:rgb(40, 43, 44);
+ }
+.card3{
+    margin: 20px;
+    background-color:rgb(165, 124, 114);
+    border-radius: 10px;
+    width:fit-content;
+    color:rgb(40, 43, 44);  
+}
+
+
+  /* cards css end */
